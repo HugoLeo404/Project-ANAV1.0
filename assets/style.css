@@ -1,0 +1,71 @@
+/* =========================================
+   PROJETO ANA - ENTERPRISE DESIGN SYSTEM
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
+
+/* Identidade Visual - ANA Branding */
+.ana-branding { 
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); 
+    padding: 25px; 
+    border-radius: 12px; 
+    border-left: 5px solid #3b82f6; 
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.ana-branding::after {
+    content: ''; position: absolute; top: 0; right: 0; width: 150px; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1));
+    transform: skewX(-45deg);
+}
+
+.titulo-ana { font-size: 3rem; font-weight: 800; color: #93c5fd; margin-bottom: 0px; letter-spacing: -1px;}
+.subtitulo { color: #cbd5e1; font-size: 1.1rem; margin-top: -5px; font-weight: 300;}
+
+/* Chat e Input - Cyber Executive */
+div[data-testid="stChatInput"] { 
+    border: 1px solid #334155 !important; 
+    border-radius: 12px !important; 
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(10px);
+}
+div[data-testid="stChatInput"]:focus-within { 
+    border: 1px solid #3b82f6 !important; 
+    box-shadow: 0 0 15px rgba(59,130,246,0.4) !important; 
+}
+
+/* Balões da IA (ANA) */
+.ana-message-box {
+    border-left: 3px solid #3b82f6; 
+    padding-left: 15px; 
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, rgba(30, 58, 138, 0.1) 0%, transparent 100%);
+    border-radius: 0 8px 8px 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Efeito Vidro nas Métricas (Glassmorphism) */
+div[data-testid="stMetricValue"] { 
+    font-size: 2rem !important; 
+    color: #60a5fa !important; 
+    font-weight: 600;
+}
+div[data-testid="metric-container"] {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+/* Custom Scrollbar para elegância */
+::-webkit-scrollbar { width: 8px; height: 8px;}
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #60a5fa; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
